@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Guru & Tenaga Kependidikan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Background Elegan */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f0c29, #000000, #24243e);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .staff-section {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .staff-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .staff-header h2 {
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .staff-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .tab-button {
+            padding: 0.8rem 1.8rem;
+            margin: 0 0.5rem;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .tab-button.active {
+            background: #96969b;
+            color: #24243e;
+            box-shadow: 0 5px 15px rgba(164, 164, 163, 0.5);
+        }
+
+        .tab-button:hover {
+            background: #b9b9b9;
+            color: #24243e;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        /* Kartu Staff dengan Glassmorphism */
+        .staff-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            padding-bottom: 1rem;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.929);
+        }
+
+        .staff-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-bottom: 4px solid #2c3752;
+        }
+
+        .staff-info {
+            padding: 1rem;
+        }
+
+        .staff-info h3 {
+            font-size: 1.4rem;
+            color: #e0e0e0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .staff-info p {
+            font-size: 1rem;
+            color: #e0e0e0;
+        }
+
+        .staff-category {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .staff-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section id="staff" class="staff-section">
+    <div class="staff-container">
+        <div class="staff-header">
+            <h2>Data Guru & Tenaga Kependidikan</h2>
+            <div class="staff-tabs">
+                <button class="tab-button active" data-filter="semua">Semua</button>
+                <button class="tab-button" data-filter="guru">Guru</button>
+                <button class="tab-button" data-filter="tata usaha">Tata Usaha</button>
+            </div>
+        </div>
+
+        <div class="staff-grid">
+            <!-- Kartu Guru -->
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Agustyanta G, S.Ag.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Agustyanta Ghufran, S.Ag</h3>
+                    <p>NIP: 197308212007101003</p>
+                    <p>Mata Pelajaran : Fiqih Dan Sejarah Kebudayaan Islam</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Hj. puji Surtiningsih,S.Pd,M.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Puji Surtiningsih, M.Si</h3>
+                    <p>NIP: 197103121997032001</p>
+                    <p>Mata Pelajaran: Biologi</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Asriningsih MR, S.PdI.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Asriningsih Mugi Rahayu, S.PdI</h3>
+                    <p>NIP: 197802072007102003</p>
+                    <p>Mata Pelajaran: Sejarah Kebudayaan Islam</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Bambang Gunawan, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Bambang Gunawan, S.Pd</h3>
+                    <p>NIP: 196804061998031002
+                    </p>
+                    <p>Mata Pelajaran: Ekonomi</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Celvy S Damawati, S.Ant.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Celvy S Darmawati, S.Ant</h3>
+                    <p>NIP: 198003192009012007
+
+                    </p>
+                    <p>Mata Pelajaran: Sejarah</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Dani Indarto, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Dani Indarto, S.Pd</h3>
+                    <p>NIP : 197906162007101003
+                    </p>
+                    <p>Mata Pelajaran: Bahasa Indonesia dan Bahasa Jawa</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+            
+            
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Dra, Sumilah.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Dra, Sumilah</h3>
+                    <p>NIP :196709011994032001 </p>
+                    <p>Mata Pelajaran: Matematika</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+             
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Dra. Rodhiyah.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Dra, Rodhiyah</h3>
+                    <p>NIP : 196701082007012025 </p>
+                    <p>Mata Pelajaran: Sejarah</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Drs. Nurcholis.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Drs, Nurcholis</h3>
+                    <p>NIP : 196808101994031001 </p>
+                    <p>Mata Pelajaran: Biologi</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Drs.H.Ansori.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Drs, Ansori</h3>
+                    <p>NIP :  196508051994031002 </p>
+                    <p>Mata Pelajaran: Bahasa Inggris</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Emy Zulfa, S.Ag.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Emy Zulfa, S.Ag</h3>
+                    <p>NIP : 197203302007012013 </p>
+                    <p>Mata Pelajaran: Al-Quran Hadist Dan Akidah Akhlak</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Endang Susilowati, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Endang Susilowati, S.Pd</h3>
+                    <p>NIP : 197209212007012018</p>
+                    <p>Mata Pelajaran: Kimia</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Eny Juwarni, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Eny Juwarni, S.Pd</h3>
+                    <p>NIP : 197808112007102003</p>
+                    <p>Mata Pelajaran: Ekonomi Dan PKW</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+               
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\H. Mukahar, M.Ag.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>H. Mukahar, M.Ag</h3>
+                    <p>NIP : 197305241999031002</p>
+                    <p>Mata Pelajaran: Al-Quran Hadist Dan Akidah Akhlak</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Hj. Khoridatul B, S.Ag.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Hj. Khoridatul Bahiyyah, S.Ag</h3>
+                    <p>NIP : 197302112007012010</p>
+                    <p>Mata Pelajaran: Fiqih Dan Akidah Akhlak</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\M Tohir, S.PdI.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>M. Tohir, S.Pd</h3>
+                    <p>NIP : </p>
+                    <p>Mata Pelajaran: Akidah Akhlak</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Marfu'ah, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Marfu'ah, S.Pd</h3>
+                    <p>NIP : 197308172005012001</p>
+                    <p>Mata Pelajaran: Pendidikan Kewarganegaraan</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Nurul Hidayatil J, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Nurul Hidayati Jannah, S.Pd</h3>
+                    <p>NIP : 197306292005012001      </p>
+                    <p>Mata Pelajaran: Sejarah</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Puji Sri Lestari, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Puji Sri Lestari, S.Pd</h3>
+                    <p>NIP : 197606152007102007</p>
+                    <p>Mata Pelajaran : Sosiologi</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Retno Windarti,S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Retno Windarti,S.Pd</h3>
+                    <p>NIP : 197505022005012002
+                    </p>
+                    <p>Mata Pelajaran: Ekonomi</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Siti Kasidah,S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Siti Kasidah,S.Pd</h3>
+                    <p>NIP : 197503122005012003
+                    </p>
+                    <p>Mata Pelajaran: Bahasa Indonesia</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Siti Khotimah, S,Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Siti Khotimah, S,Pd</h3>
+                    <p>NIP : 196910232003122001</p>
+                    <p>Mata Pelajaran: Bahasa Indonesia</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Siti Zuhriyah, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Siti Zuhriyah, S.Pd</h3>
+                    <p>NIP : 198004292007102002
+                    </p>
+                    <p>Mata Pelajaran: PKWU</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Sri Hariningsih, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Sri Hariningsih, S.Pd</h3>
+                    <p>NIP : 197501242007102004
+                    </p>
+                    <p>Mata Pelajaran: Bahasa Indonesia</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Sutejo S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Sutejo S.Pd</h3>
+                    <p>NIP : </p>
+                    <p>Mata Pelajaran: Fisika</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Umi Ummul Kh, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Umi Ummul Kh, S.Pd</h3>
+                    <p>NIP : 198204122005012002
+                    </p>
+                    <p>Mata Pelajaran: Biologi</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Utami Ning R, S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Utami Ning Rohima, S.Pd</h3>
+                    <p>NIP : 197903052005012005
+                    </p>
+                    <p>Mata Pelajaran: Bahasa Inggris</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Achmad Hindarta, S.Pd</h3>
+                    <p>NIP : 197001181995031002</p>
+                    <p>Mata Pelajaran: Biologi</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Puji Astuti, S.Pd</h3>
+                    <p>NIP : 197904232005012002</p>
+                    <p>Mata Pelajaran: Fisika</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Sosiawan Damayanti, S.Pd</h3>
+                    <p>NIP : 197905112005012003</p>
+                    <p>Mata Pelajaran: Pendidikan Kewarganegaraan</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Abu Masaid, S.Ag.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Abu Masaid, S.Ag</h3>
+                    <p>NIP : 197403242007011010
+                    </p>
+                    <p>Mata Pelajaran: Bahasa Arab</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Bima Adi S, S,Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Bima Adi Suryawan, S.Pd</h3>
+                    <p>NIP : 198001192005011002
+                    </p>
+                    <p>Mata Pelajaran: Matematika</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Jliteng Pribadi,S.Pd.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Jliteng Pribadi,S.Pd</h3>
+                    <p>NIP : 196612102005011001</p>
+                    <p>Mata Pelajaran: Kimia</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Drs. Sadikan</h3>
+                    <p>NIP : 196505172002121001</p>
+                    <p>Mata Pelajaran: Al-Quran Hadist Dan Akidah Akhlak</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="d:\Guru MAN\Dra.Hj Siti Roikhanah,.jpg" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Dra.Hj Siti Roikhanah</h3>
+                    <p>NIP : 196711041994032002
+                    </p>
+                    <p>Mata Pelajaran: Bahasa Inggris</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Nurika Luthfiana,SPd</h3>
+                    <p>NIP : 199007092019032024</p>
+                    <p>Mata Pelajaran: Matematika</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Moh. Fajar Yoga Pratama, SPd </h3>
+                    <p>NIP : </p>
+                    <p>Mata Pelajaran: BAhasa Jawa Dan pendidkan Seni</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Minanur Rohman,S.Hum</h3>
+                    <p>NIP : 198908132019031013</p>
+                    <p>Mata Pelajaran : Sejarah Kebudayaan ISlam Dan Bahasa Arab</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Sudarto,SPd</h3>
+                    <p>NIP : 198709052023211025</p>
+                    <p>Guru BK </p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Shofyana,SPd</h3>
+                    <p>NIP : 199001212023212037</p>
+                    <p>Mata Pelajaran : Bahasa Jawa </p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Khawil Ma'ali,S.Pd</h3>
+                    <p>NIP : 199502182023211016</p>
+                    <p>Mata Pelajaran : Bahasa Arab </p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Sulistio,S.Pd</h3>
+                    <p>NIP : 198410102024211018</p>
+                    <p>Mata Pelajaran: </p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Muhammad Taufik Aziz,S.Or</h3>
+                    <p>NIP :</p>
+                    <p>Mata Pelajaran: Pendidikan Olahraga</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Meyriska Silvia Ariyani, S.Pd</h3>
+                    <p>NIP : </p>
+                    <p>Mata Pelajaran: </p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Dian Kurniawati, S.Pd</h3>
+                    <p>NIP : </p>
+                    <p>MAta Pelajaran : Geografi Dan Sejarah</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Dyah Puspitasari, S.Pd</h3>
+                    <p>NIP : 198305072023212036</p>
+                    <p>Guru BK</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="guru">
+                <img src="" alt="Foto Guru" class="staff-image">
+                <div class="staff-info">
+                    <h3>Arwani, S.Pd</h3>
+                    <p>NIP : </p>
+                    <p>Mata Pelajaran : Pendidkan Olahraga</p>
+                    <span class="staff-category">Guru</span>
+                </div>
+            </div>
+
+          
+
+            <!-- Bagian Tata Usaha -->
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Hj. Supiyatun,S.H</h3>
+                    <p>NIP: 196908071990022001</p>
+                    <p>Kepala Tata Usaha</p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="d:\Guru MAN\Novie Dewi Kartika Sari, S.Pd.jpg" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Novie Dewi Kartika Sari,S.Pd
+                    </h3>
+                    <p>NIP: 198305072023212036</p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Anita Rahayu, S.Pd </h3>
+                    <p>
+                    </p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Beny Ady Mardiyanto S.T</h3>
+                    <p></p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Putri Meirina Rustiani</h3>
+                    <p></p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Muhammad Aufa Alhaq, S.Sos</h3>
+                    <p></p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Betty Permata Nita, S.T</h3>
+                    <p></p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Nurur Rohmah</h3>
+                    <p></p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+            <div class="staff-card" data-category="tata usaha">
+                <img src="" alt="Foto Staff TU" class="staff-image">
+                <div class="staff-info">
+                    <h3>Miyono</h3>
+                    <p></p>
+                    <p></p>
+                    <span class="staff-category">Tata Usaha</span>
+                </div>
+            </div>
+
+
+
+        
+
+
+ <!-- Kartu yang lain''' -->
+
+ <div class="staff-card" data-category="Semua">
+    <img src="d:\Guru MAN\M Khoirul Khalim.jpg" alt="Foto Staff TU" class="staff-image">
+    <div class="staff-info">
+        <h3>M. Khoirul Khalim </h3>
+        <p>Satpam Madrasah</p>
+        <p></p>
+    </div>
+ </div>
+
+ <div class="staff-card" data-category="Semua">
+    <img src="" alt="Foto Ketenagakerjaan Madrasah" class="staff-image">
+    <div class="staff-info">
+        <h3>Budiono </h3>
+        <p>Penjaga Madrasah</p>
+        <p></p>
+      </div>
+    </div> 
+
+
+      </div>
+    </div>
+  </section>
+
+<script>
+    // Script untuk tab filtering
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const category = button.getAttribute('data-filter');
+            document.querySelectorAll('.staff-card').forEach(card => {
+                if (category === 'semua' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarana & Prasarana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #374349, #f2fcfe);
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        #fasilitas {
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            position: relative;
+            text-align: center;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, #000000, #233e48);
+            border-radius: 2px;
+        }
+
+        .fasilitas {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            padding: 1rem;
+        }
+
+        .fasilitas-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .fasilitas-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #28292a, #233b44);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .fasilitas-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(28, 146, 210, 0.2);
+        }
+
+        .fasilitas-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .fasilitas-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .fasilitas-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .fasilitas-info {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .fasilitas-info h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .fasilitas-info p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .fasilitas {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 2rem;
+                padding: 0.5rem;
+            }
+
+            .fasilitas-info h3 {
+                font-size: 1.5rem;
+            }
+
+            .fasilitas-info p {
+                font-size: 1rem;
+            }
+
+            #fasilitas {
+                padding: 3rem 1rem;
+            }
+        }
+
+        @media (hover: none) {
+            .fasilitas-item:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="fasilitas">
+        <h2>Sarana & Prasarana</h2>
+        <div class="fasilitas">
+            <div class="fasilitas-item">
+                <img src="kelas.jpg" alt="Ruang Kelas">
+                <div class="fasilitas-info">
+                    <h3>Ruang Kelas</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.24.02_7a76085e.jpg" alt="Laboratorium">
+                <div class="fasilitas-info">
+                    <h3>Laboratorium</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Perpustakaan</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Kelas Digital</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Ruang Keterampilan</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Ruang Media</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Marem Mart</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Kantin</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Asrama</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Masjid</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="perpustakaan.jpg" alt="Perpustakaan">
+                <div class="fasilitas-info">
+                    <h3>Fasilitas Seni Dan Olahraga</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 11.11.45_c58dd59d.jpg" alt="Aula Serbaguna">
+                <div class="fasilitas-info">
+                    <h3>Aula Serbaguna</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+    <div class="back-button">
+        <a href="index.html">Kembali ke Beranda</a>
+    </div>
+
+
+
+</body>
+</html>

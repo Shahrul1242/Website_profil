@@ -1,0 +1,97 @@
+
+body {
+    background: linear-gradient(
+        to bottom,
+        #87CEEB 0%,    /* Light sky blue at top */
+        #B0E0E6 50%,   /* Powder blue in middle */
+        #E6E6FA 100%   /* Light lavender at bottom */
+    );
+    min-height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+/* Option 2: Detailed Morning Sky with Clouds */
+body {
+    background: linear-gradient(
+        to bottom,
+        #7EC0EE 0%,      /* Morning blue */
+        #9ED9F3 30%,     /* Light blue */
+        #C4E7F7 60%,     /* Pale blue */
+        #E1F2FA 100%     /* Almost white */
+    );
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+/* Cloud Layer 1 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 50% 50%, 
+            rgba(255,255,255,0.8) 0%,
+            rgba(255,255,255,0.4) 40%,
+            transparent 100%) 80% 20% / 40% 40% no-repeat,
+        radial-gradient(circle at 50% 50%, 
+            rgba(255,255,255,0.8) 0%,
+            rgba(255,255,255,0.4) 40%,
+            transparent 100%) 20% 40% / 30% 30% no-repeat,
+        radial-gradient(circle at 50% 50%, 
+            rgba(255,255,255,0.8) 0%,
+            rgba(255,255,255,0.4) 40%,
+            transparent 100%) 65% 60% / 35% 35% no-repeat;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Cloud Layer 2 */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 50% 50%, 
+            rgba(255,255,255,0.6) 0%,
+            rgba(255,255,255,0.3) 40%,
+            transparent 100%) 40% 30% / 35% 35% no-repeat,
+        radial-gradient(circle at 50% 50%, 
+            rgba(255,255,255,0.6) 0%,
+            rgba(255,255,255,0.3) 40%,
+            transparent 100%) 70% 70% / 25% 25% no-repeat;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Make sure content appears above the background layers */
+section, header, footer {
+    position: relative;
+    z-index: 3;
+}
+
+/* Optional: Add subtle animation to clouds */
+@keyframes floatClouds {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+body::before {
+    animation: floatClouds 60s linear infinite;
+}
+
+body::after {
+    animation: floatClouds 45s linear infinite;
+}

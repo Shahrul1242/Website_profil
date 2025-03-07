@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPDB MAN 1 Rembang 2025/2026</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2C3E50;
+            --secondary-color: #16A085;
+            --accent-color: #E74C3C;
+            --light-color: #ECF0F1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f6fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/api/placeholder/1920/300') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--secondary-color);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Penerimaan Peserta Didik Baru (PPDB)</h1>
+            <h2>MAN 1 Rembang 2025/2026</h2>
+            <p>Membentuk Generasi Unggul, Berakhlak Mulia, dan Berprestasi</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Informasi Penting</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Periode Pendaftaran</h3>
+                    <p>1 Februari - 31 Juni 2025</p>
+                </div>
+                <div class="card">
+                    <h3>Periode Daftar Ulang</h3>
+                    <p>1 April - 31 Juni 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Syarat Pendaftaran</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Kartu Keluarga</h3>
+                </div>
+                <div class="card">
+                    <h3>Akta Kelahiran</h3>
+                </div>
+                <div class="card">
+                    <h3>Dokumen Mts/SMP sederajat</h3>
+                </div>
+           
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Kelas Keterampilan</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Kelas SAINS</h3>
+                </div>
+                <div class="card">
+                    <h3>Kelas Desain Grafis</h3>
+                </div>
+                <div class="card">
+                    <h3>Kelas Tata Boga</h3>
+                </div>
+                <div class="card">
+                    <h3>Kelas Tata Busana</h3>
+                </div>
+                <div class="card">
+                    <h3>Kelas Otomotif</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Ekstrakurikuler</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Pramuka</h3>
+                </div>
+                <div class="card">
+                    <h3>Voli</h3>
+                </div>
+                <div class="card">
+                    <h3>Futsal</h3>
+                </div>
+                <div class="card">
+                    <h3>Hadroh</h3>
+                </div>
+                <div class="card">
+                    <h3>Gamelan</h3>
+                </div>
+                <div class="card">
+                    <h3>Qiroah</h3>
+                </div>
+                <div class="card">
+                    <h3>PMR</h3>
+                </div>
+                <div class="card">
+                    <h3>PBB</h3>
+                </div>
+                <div class="card">
+                    <h3>English Club</h3>
+                </div>
+                <div class="card">
+                    <h3>Informatika</h3>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="section">
+            <h2 class="section-title">Program Beasiswa</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Donatur Alumni</h3>
+                </div>
+                <div class="card">
+                    <h3>BAZNAS</h3>
+                </div>
+                <div class="card">
+                    <h3>PIP</h3>
+                </div>
+                <div class="card">
+                    <h3>KPRI Khoiro Ummah</h3>
+                </div>
+                <div class="card">
+                    <h3>Marem Mart</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Timeline PPDB</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Pendaftaran Online & Offline</h3>
+                    <p>1 Februari - 31 Juni 2025</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Daftar Ulang</h3>
+                    <p>1 April - 31 Juni 2025</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Matsama</h3>
+                    <p>Juli 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Kontak</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Abu Masaid</h3>
+                    <p><i class="fas fa-phone"></i> 0813 9000 5974</p>
+                </div>
+                <div class="card">
+                    <h3>Ummi Umul C</h3>
+                    <p><i class="fas fa-phone"></i> 0882 3252 7951</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Pendaftaran</h2>
+            <div style="text-align: center;">
+                <a href="https://bit.ly/ppdbman1rembang2025-2026" class="btn">
+                    <i class="fas fa-edit"></i> Daftar Sekarang
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

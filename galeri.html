@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Styling global */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f0c29, #000000, #d2d2d2);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            color: #e1e1e1;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Galeri Foto */
+        .galeri-foto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .foto-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+
+        .foto-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(244, 197, 49, 0.4);
+        }
+
+        .foto-item img {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .foto-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .foto-item p {
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        /* Galeri Video */
+        .galeri-video {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .video-item {
+            max-width: 750px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(244, 197, 49, 0.3);
+            position: relative;
+        }
+
+        .video-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+            border-radius: 15px;
+            z-index: 1;
+        }
+
+        .video-item video {
+            width: 100%;
+            border-radius: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .video-item p {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        @media (max-width: 768px) {
+            .galeri-foto {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .video-item {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <h2>Galeri Media</h2>
+
+    <section id="galeri">
+        <div class="galeri-foto">
+            <div class="foto-item">
+                <img src="d:\Galeri\IMG_0135.JPG" alt="Kegiatan 1">
+                <p>Karnaval 2024</p>
+</div>
+
+            <div class="foto-item">
+                <img src="d:\Galeri\upacara.jpg" alt="Kegiatan 2">
+                <p>Upacara Bendera</p>
+            </div>
+            <div class="foto-item">
+                <img src="d:\Galeri\IMG_0211.JPG" alt="Kegiatan 3">
+                <p>Karnaval 2024</p>
+            </div>
+
+            <div class="foto-item">
+                <img src="d:\Galeri\IMG_0206.JPG" alt="Kegiatan 4">
+                <p>Karnaval 2024</p>
+            </div>
+       
+        <div class="foto-item">
+            <img src="d:\Galeri\IMG_0216.JPG" alt="Kegiatan 4">
+            <p>Karnaval 2024</p>
+        </div>
+   
+    <div class="foto-item">
+        <img src="d:\Galeri\IMG_0222.JPG" alt="Kegiatan 4">
+        <p>Karnaval 2024</p>
+    </div>
+
+ <div class="foto-item">
+    <img src="d:\Galeri\IMG_0231.JPG" alt="Kegiatan 4">
+    <p>Karnaval 2024</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\IMG_1502.JPG" alt="Kegiatan 4">
+    <p>OSIM DAN DA</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\IMG_0295.JPG" alt="Kegiatan 4">
+    <p>Karnaval 2024</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_d548c5f5.jpg" alt="Kegiatan 4">
+    <p>Karnaval 2024</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_a14f241a.jpg" alt="Kegiatan 4">
+    <p>Karnaval 2024</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_24256c6b.jpg" alt="Kegiatan 4">
+    <p>Karnaval 2024</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_6676dc88.jpg" alt="Kegiatan 4">
+    <p>Karnaval 2024</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_81d13c99.jpg" alt="Kegiatan 4">
+    <p></p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_56a72297.jpg" alt="Kegiatan 4">
+    <p>Maulid NabiS</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_20a3d9c7.jpg" alt="Kegiatan 4">
+    <p>Maulid Nabi</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.33_fec57043.jpg" alt="Kegiatan 4">
+    <p>SERTIJAB</p>
+</div>
+
+ <div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.33_253e3f7b.jpg" alt="Kegiatan 4">
+    <p>Maulid Nabi</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.28_9ea5774e.jpg" alt="Kegiatan 4">
+    <p>Maulid Nabi</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.30_006eaba5.jpg" alt="Kegiatan 4">
+    <p>Maulid Nabi</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.33_6a256249.jpg" alt="Kegiatan 4">
+    <p>Maulid Nabi</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.33_5ade47c2.jpg" alt="Kegiatan 4">
+    <p>Maulid Nabi</p>
+</div>
+
+<div class="foto-item">
+    <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.44.34_c7d68095.jpg" alt="Kegiatan 4">
+    <p>Maulid Nabi</p>
+</div>
+
+</div>
+
+        <div class="galeri-video">
+            <div class="video-item">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+                <p>Profil MAN 1 Rembang</p>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="back-button">
+    <a href="index.html">Kembali ke Beranda</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+/* Reset and Base Styles */
+header {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body {
+    background: url('d:\Galeri\upacara.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+
+.hero {
+    height: 100vh; /* Menyesuaikan tinggi dengan layar */
+    background: url('d:\Galeri\upacara.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+body {
+    /* Pilihan untuk background-size */
+    background-size: cover;      /* Gambar menutupi seluruh container, mungkin terpotong */
+    background-size: contain;    /* Gambar ditampilkan penuh, mungkin ada ruang kosong */
+    background-size: 100% 100%;  /* Gambar dipaksa mengisi container */
+    background-size: 500px 300px; /* Ukuran spesifik dalam pixel */
+    background-size: 50% 50%;    /* Ukuran dalam persentase */
+}
+
+body {
+    /* Posisi background bisa dikombinasikan */
+    background-position: center center;  /* Tengah horizontal dan vertikal */
+    background-position: left top;       /* Kiri atas */
+    background-position: right bottom;   /* Kanan bawah */
+    background-position: 50% 50%;        /* Menggunakan persentase */
+    background-position: 20px 50px;      /* Menggunakan pixel */
+}
+
+body {
+    /* Bisa menggunakan beberapa background sekaligus */
+    background-image: url('overlay.png'), url('main-bg.jpg');
+    background-position: center center, top left;
+    background-size: cover, contain;
+    /* Background pertama akan berada di atas background kedua */
+}
+
+body {
+    /* Menggabungkan gradient dengan gambar */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Ini akan membuat efek gelap pada gambar */
+}
+
+body {
+    /* Pilihan untuk background-attachment */
+    background-attachment: fixed;    /* Gambar tetap saat scroll */
+    background-attachment: scroll;   /* Gambar ikut scroll (default) */
+    background-attachment: local;    /* Gambar scroll dengan konten */
+}
+
+/* Mengubah background berdasarkan ukuran layar */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('foto-mobile.jpg'); /* Gambar berbeda untuk mobile */
+        background-position: top center;
+    }
+}
+
+body {
+    background-color: #f0f0f0; /* Fallback jika gambar gagal dimuat */
+    background-image: url('foto.jpg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #004d40;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #8bc6bc;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+nav {
+    background-color: #33a69b;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #004d40;
+}
+
+/* Hero Section */
+.hero {
+    height: 600px;
+    position: relative;
+    margin-top: 120px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: #33a69b;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Sections Common Styles */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sambutan Styles */
+.sambutan {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.kepala-profile {
+    text-align: center;
+}
+
+.kepala-profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Visi Misi Styles */
+.visi-misi {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.visi, .misi {
+    margin: 1rem 0;
+}
+
+.misi ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+/* Struktur Organisasi Styles */
+.struktur-organisasi img {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    display: block;
+}
+
+/* Akademik Styles */
+.program-unggulan {
+    background-color: #e8f5e9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* Ekstrakurikuler Styles */
+.ekskul-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.ekskul {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.ekskul:hover {
+    transform: translateY(-5px);
+}
+
+.ekskul img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* PPDB Styles */
+.info-ppdb {
+    background-color: #e3f2fd;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.timeline {
+    margin: 2rem 0;
+}
+
+/* Berita Styles */
+.berita-terbaru {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.berita-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.berita-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.berita-item h3 {
+    padding: 1rem;
+}
+
+.tanggal {
+    color: #666;
+    padding: 0 1rem;
+}
+
+.excerpt {
+    padding: 0 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    background-color: #004d40;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #00695c;
+}
+
+/* Galeri Styles */
+.galeri-foto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.foto-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.foto-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Fasilitas Styles */
+.fasilitas-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.fasilitas-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.fasilitas-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+

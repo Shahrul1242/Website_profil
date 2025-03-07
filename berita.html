@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Pengumuman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f0c29, #000000, #24243e);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+        h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #dfdfdf;
+        }
+        .berita-terbaru {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .berita-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .berita-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .berita-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .berita-item p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .berita-item .date {
+            font-size: 14px;
+            color: #c2c2c2;
+            font-weight: bold;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .read-more:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="berita">
+    <section id="berita">
+        <h2>Berita & Pengumuman</h2>
+        
+        
+        <div class="berita-terbaru">
+            <article class="berita-item">
+                <img src="d:\Galeri\WhatsApp Image 2025-02-11 at 09.24.02_7a76085e.jpg" alt="Berita">
+                <p class="date">1 Februari 2025</p>
+                <p class="excerpt">MAN 1 Rembang resmikan perpustakaan baru dan lab modern</p>
+                <a href="https://rembangkab.go.id/berita/awal-2025-man-1-rembang-resmikan-perpustakaan-baru-dan-tiga-laboratorium-modern/" class="read-more">Baca selengkapnya</a>
+            </article>
+
+            <article class="berita-item">
+                <img src="" alt="Berita">
+                <p class="date">5 Februari 2025</p>
+                <p class="excerpt">Siswa MAN 1 Rembang raih juara 1 nasional JSSO 2022.</p>
+                <a href="https://jateng.kemenag.go.id/berita/man-1-rembang-raih-juara-1-nasional-jsso-2022/" class="read-more">Baca selengkapnya</a>
+            </article>
+
+            <article class="berita-item">
+                <img src="" alt="Berita">
+                <p class="date">10 Februari 2025</p>
+                <p class="excerpt">MAN 1 Rembang Borong Medali di Kompetisi Tingkat Nasional</p>
+                <a href="https://katakutip.com/man-1-rembang-borong-medali-di-kompetisi-tingkat-nasional/" class="read-more">Baca selengkapnya</a>
+            </article>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
